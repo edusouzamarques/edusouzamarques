@@ -7,14 +7,15 @@ I build control planes for autonomous agents and defend enterprise digital infra
 
 ## 🎯 Hands-on Cybersecurity Portfolio (Simulated Scenarios & Audit Labs)
 
-A dedicated operational section showcasing hands-on incident investigations, compliance audits, and network defense simulations derived from the **Google Cybersecurity Professional Certificate** and industry standards (NIST SP 800-53 / NIST SP 800-63B / CIS Controls / GDPR):
+A dedicated operational showcase of hands-on incident investigations, compliance audits, and network defense simulations derived from the **Google Cybersecurity Professional Certificate** and industry frameworks (NIST CSF / NIST SP 800-53 / NIST SP 800-63B / CIS Controls / GDPR):
 
 ```mermaid
 flowchart TD
     subgraph Labs["🛡️ Verified Cybersecurity Labs & Audits"]
         L1["<b>GRC & Compliance Audit</b><br/>Botium Toys Security Audit<br/><i>NIST CSF / Scope / Controls</i>"]
         L2["<b>Perimeter & Access Hardening</b><br/>Network Hardening & Risk Assessment<br/><i>MFA / Port Filtering / SIEM</i>"]
-        L3["<b>Network Forensics & Packet Analysis</b><br/>tcpdump Incident Investigation<br/><i>DNS & HTTP Malware Triage</i>"]
+        L3["<b>Incident Response & DoS Defense</b><br/>DoS ICMP Flood Incident Report<br/><i>NIST CSF / Rate Limiting / uRPF</i>"]
+        L4["<b>Network Forensics & Packet Analysis</b><br/>tcpdump Incident Investigation<br/><i>DNS & HTTP Malware Triage</i>"]
     end
 
     subgraph Hub["🌐 Live Portfolio Hub"]
@@ -24,6 +25,7 @@ flowchart TD
     L1 --> Hub
     L2 --> Hub
     L3 --> Hub
+    L4 --> Hub
 ```
 
 ### 📋 Practical Lab Repositories
@@ -38,8 +40,13 @@ flowchart TD
 - **Scenario:** Remediation of a social media platform breach caused by exposed database ports, vendor-default passwords, and lack of MFA.
 - **Deliverables:** Formal risk assessment report, defense-in-depth architecture, and executable Python simulation engine reproducing the breach and validating hardened controls.
 
-#### 3. [🔍 tcpdump Incident Investigation & Packet Analysis Lab](https://github.com/edusouzamarques/tcpdump-incident-investigation-lab)
-- **Focus:** Network Protocol Analysis, Incident Response, and Packet Sniffing (`tcpdump`).
+#### 3. [⚡ DoS (ICMP Flood) Incident Report Analysis (NIST CSF)](https://github.com/edusouzamarques/dos-icmp-flood-incident-report-nist-csf)
+- **Focus:** Incident Response (IR), Denial of Service (DoS) Containment, and NIST CSF 5-Function Lifecycle.
+- **Scenario:** Triage, containment, and recovery of a 2-hour network blackout caused by an ICMP ping flood exploiting an unconfigured firewall.
+- **Deliverables:** Full NIST CSF incident report (Identify, Protect, Detect, Respond, Recover) and Python simulation demonstrating interface queue overflow vs. rate-limiting and anti-spoofing (uRPF).
+
+#### 4. [🔍 tcpdump Incident Investigation & Packet Analysis Lab](https://github.com/edusouzamarques/tcpdump-incident-investigation-lab)
+- **Focus:** Network Protocol Analysis, Threat Hunting, and Packet Sniffing (`tcpdump`).
 - **Scenario:** Triage of a compromised web server executing unauthorized JavaScript browser redirection to a malicious domain.
 - **Deliverables:** Real packet trace analysis, TCP 3-way handshake dissection, DNS/HTTP correlation, and packet analysis cheat sheet.
 
