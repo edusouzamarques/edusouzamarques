@@ -7,25 +7,32 @@ I build control planes for autonomous agents and defend enterprise digital infra
 
 ## 🎯 Hands-on Cybersecurity Portfolio (Simulated Scenarios & Audit Labs)
 
-A dedicated operational showcase of hands-on incident investigations, compliance audits, and network defense simulations derived from the **Google Cybersecurity Professional Certificate** and industry frameworks (NIST CSF / NIST SP 800-53 / NIST SP 800-63B / CIS Controls / GDPR):
+A dedicated operational showcase of hands-on incident investigations, compliance audits, and security simulations derived from the **Google Cybersecurity Professional Certificate** and industry frameworks (NIST CSF / NIST SP 800-53 / NIST SP 800-63B / CIS Controls / GDPR):
 
 ```mermaid
 flowchart TD
-    subgraph Labs["🛡️ Verified Cybersecurity Labs & Audits"]
+    subgraph GRC["1. Governance, Risk & Compliance"]
         L1["<b>GRC & Compliance Audit</b><br/>Botium Toys Security Audit<br/><i>NIST CSF / Scope / Controls</i>"]
+    end
+
+    subgraph Defense["2. Network & System Hardening"]
         L2["<b>Perimeter & Access Hardening</b><br/>Network Hardening & Risk Assessment<br/><i>MFA / Port Filtering / SIEM</i>"]
         L3["<b>Incident Response & DoS Defense</b><br/>DoS ICMP Flood Incident Report<br/><i>NIST CSF / Rate Limiting / uRPF</i>"]
-        L4["<b>Network Forensics & Packet Analysis</b><br/>tcpdump Incident Investigation<br/><i>DNS & HTTP Malware Triage</i>"]
+        L4["<b>Linux Authorization & Least Privilege</b><br/>Linux File Permissions Audit<br/><i>chmod / ls -la / Access Control</i>"]
+    end
+
+    subgraph Forensics["3. Forensics & SOC Data Analysis"]
+        L5["<b>Network Forensics & Packet Analysis</b><br/>tcpdump Incident Investigation<br/><i>DNS & HTTP Malware Triage</i>"]
+        L6["<b>SQL SOC Triage & Log Filtering</b><br/>SQL Security Incident Investigation<br/><i>AND / OR / NOT / LIKE Telemetry</i>"]
     end
 
     subgraph Hub["🌐 Live Portfolio Hub"]
         Web["GitHub Pages Showcase<br/><b>edusouzamarques.github.io/cybersec</b>"]
     end
 
-    L1 --> Hub
-    L2 --> Hub
-    L3 --> Hub
-    L4 --> Hub
+    GRC --> Hub
+    Defense --> Hub
+    Forensics --> Hub
 ```
 
 ### 📋 Practical Lab Repositories
@@ -45,7 +52,17 @@ flowchart TD
 - **Scenario:** Triage, containment, and recovery of a 2-hour network blackout caused by an ICMP ping flood exploiting an unconfigured firewall.
 - **Deliverables:** Full NIST CSF incident report (Identify, Protect, Detect, Respond, Recover) and Python simulation demonstrating interface queue overflow vs. rate-limiting and anti-spoofing (uRPF).
 
-#### 4. [🔍 tcpdump Incident Investigation & Packet Analysis Lab](https://github.com/edusouzamarques/tcpdump-incident-investigation-lab)
+#### 4. [🔑 Linux File Permissions & Least Privilege Audit Lab](https://github.com/edusouzamarques/linux-file-permissions-least-privilege-audit)
+- **Focus:** Operating System Hardening, Access Control Lists (ACLs), and Principle of Least Privilege (PoLP).
+- **Scenario:** Security audit of research team files (`/home/researcher2/projects`), revoking unauthorized world-write permissions, locking down archived files, and isolating sensitive subdirectories.
+- **Deliverables:** Comprehensive audit report with terminal telemetry and reproducible Bash automation script.
+
+#### 5. [🔍 SQL Security Incident Investigation & Telemetry Filtering Lab](https://github.com/edusouzamarques/sql-security-incident-investigation-lab)
+- **Focus:** Database Security, SOC Incident Triage, and Authentication Log Analysis via SQL.
+- **Scenario:** Investigating after-hours failed login spikes, isolating multi-day breach timelines, detecting foreign IP anomalies, and segmenting employee workstations for vulnerability patching.
+- **Deliverables:** Formal triage report, standalone SQLite database instance, and automated query execution engine.
+
+#### 6. [📡 tcpdump Incident Investigation & Packet Analysis Lab](https://github.com/edusouzamarques/tcpdump-incident-investigation-lab)
 - **Focus:** Network Protocol Analysis, Threat Hunting, and Packet Sniffing (`tcpdump`).
 - **Scenario:** Triage of a compromised web server executing unauthorized JavaScript browser redirection to a malicious domain.
 - **Deliverables:** Real packet trace analysis, TCP 3-way handshake dissection, DNS/HTTP correlation, and packet analysis cheat sheet.
@@ -92,6 +109,6 @@ Thirteen years in the military police teaches you that systems fail at the worst
 
 ## 📬 Stack & Contact
 
-- **Cybersecurity Standards:** NIST CSF · NIST SP 800-53 / 800-63B · CIS Controls v8 · GDPR / LGPD · Wireshark / tcpdump · SIEM
+- **Cybersecurity Standards:** NIST CSF · NIST SP 800-53 / 800-63B · CIS Controls v8 · GDPR / LGPD · SQL / MariaDB · Wireshark / tcpdump · SIEM
 - **AI Stack:** Python 3.9+ · zero-dependency · ~3,400 tests · CI on Linux/macOS/Windows · MIT licensed
 - **Contact:** [LinkedIn — /in/edusouzamarques](https://www.linkedin.com/in/edusouzamarques) · eduardo@zemark.dev
