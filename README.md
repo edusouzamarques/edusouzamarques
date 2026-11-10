@@ -11,19 +11,20 @@ A dedicated operational showcase of hands-on incident investigations, compliance
 
 ```mermaid
 flowchart TD
-    subgraph GRC["1. Governance, Risk & Compliance"]
+    subgraph GRC["1. Governance, Risk & Compliance (GRC)"]
         L1["<b>GRC & Compliance Audit</b><br/>Botium Toys Security Audit<br/><i>NIST CSF / Scope / Controls</i>"]
+        L2["<b>Data Leak Prevention & Least Privilege</b><br/>Data Leak Prevention (NIST AC-6)<br/><i>DLP / Auto-Revocation / RBAC</i>"]
     end
 
     subgraph Defense["2. Network & System Hardening"]
-        L2["<b>Perimeter & Access Hardening</b><br/>Network Hardening & Risk Assessment<br/><i>MFA / Port Filtering / SIEM</i>"]
-        L3["<b>Incident Response & DoS Defense</b><br/>DoS ICMP Flood Incident Report<br/><i>NIST CSF / Rate Limiting / uRPF</i>"]
-        L4["<b>Linux Authorization & Least Privilege</b><br/>Linux File Permissions Audit<br/><i>chmod / ls -la / Access Control</i>"]
+        L3["<b>Perimeter & Access Hardening</b><br/>Network Hardening & Risk Assessment<br/><i>MFA / Port Filtering / SIEM</i>"]
+        L4["<b>Incident Response & DoS Defense</b><br/>DoS ICMP Flood Incident Report<br/><i>NIST CSF / Rate Limiting / uRPF</i>"]
+        L5["<b>Linux Authorization & Least Privilege</b><br/>Linux File Permissions Audit<br/><i>chmod / ls -la / Access Control</i>"]
     end
 
     subgraph Forensics["3. Forensics & SOC Data Analysis"]
-        L5["<b>Network Forensics & Packet Analysis</b><br/>tcpdump Incident Investigation<br/><i>DNS & HTTP Malware Triage</i>"]
-        L6["<b>SQL SOC Triage & Log Filtering</b><br/>SQL Security Incident Investigation<br/><i>AND / OR / NOT / LIKE Telemetry</i>"]
+        L6["<b>Network Forensics & Packet Analysis</b><br/>tcpdump Incident Investigation<br/><i>DNS & HTTP Malware Triage</i>"]
+        L7["<b>SQL SOC Triage & Log Filtering</b><br/>SQL Security Incident Investigation<br/><i>AND / OR / NOT / LIKE Telemetry</i>"]
     end
 
     subgraph Hub["🌐 Live Portfolio Hub"]
@@ -42,27 +43,32 @@ flowchart TD
 - **Scenario:** Comprehensive security audit of an international toy company preparing for modern digital expansion.
 - **Deliverables:** Complete stakeholder-ready audit report, NIST CSF alignment matrix, scope boundaries, risk register, and [executive PDF report](https://edusouzamarques.github.io/cybersec/Botium_Toys_Security_Audit_Report.pdf).
 
-#### 2. [🔒 Network Hardening & Security Risk Assessment Lab](https://github.com/edusouzamarques/network-hardening-security-risk-assessment)
+#### 2. [📋 Data Leak Prevention & Least Privilege Lab (NIST SP 800-53: AC-6)](https://github.com/edusouzamarques/data-leak-prevention-nist-ac6)
+- **Focus:** Data Loss Prevention (DLP), Access Control Lists, and NIST SP 800-53 Control AC-6.
+- **Scenario:** Triage and remediation of an internal data leak at an EdTech firm where confidential product roadmaps were shared externally due to lack of link expiration and over-provisioned access.
+- **Deliverables:** Formal Data Leak Worksheet, NIST CSF mapping (PR.DS-5), and an executable Python simulation validating expiring TTL links and role-based sharing blocks.
+
+#### 3. [🔒 Network Hardening & Security Risk Assessment Lab](https://github.com/edusouzamarques/network-hardening-security-risk-assessment)
 - **Focus:** Network Defense, Perimeter Port Filtering, Password Policies, and Multi-Factor Authentication.
 - **Scenario:** Remediation of a social media platform breach caused by exposed database ports, vendor-default passwords, and lack of MFA.
 - **Deliverables:** Formal risk assessment report, defense-in-depth architecture, and executable Python simulation engine reproducing the breach and validating hardened controls.
 
-#### 3. [⚡ DoS (ICMP Flood) Incident Report Analysis (NIST CSF)](https://github.com/edusouzamarques/dos-icmp-flood-incident-report-nist-csf)
+#### 4. [⚡ DoS (ICMP Flood) Incident Report Analysis (NIST CSF)](https://github.com/edusouzamarques/dos-icmp-flood-incident-report-nist-csf)
 - **Focus:** Incident Response (IR), Denial of Service (DoS) Containment, and NIST CSF 5-Function Lifecycle.
 - **Scenario:** Triage, containment, and recovery of a 2-hour network blackout caused by an ICMP ping flood exploiting an unconfigured firewall.
 - **Deliverables:** Full NIST CSF incident report (Identify, Protect, Detect, Respond, Recover) and Python simulation demonstrating interface queue overflow vs. rate-limiting and anti-spoofing (uRPF).
 
-#### 4. [🔑 Linux File Permissions & Least Privilege Audit Lab](https://github.com/edusouzamarques/linux-file-permissions-least-privilege-audit)
+#### 5. [🔑 Linux File Permissions & Least Privilege Audit Lab](https://github.com/edusouzamarques/linux-file-permissions-least-privilege-audit)
 - **Focus:** Operating System Hardening, Access Control Lists (ACLs), and Principle of Least Privilege (PoLP).
 - **Scenario:** Security audit of research team files (`/home/researcher2/projects`), revoking unauthorized world-write permissions, locking down archived files, and isolating sensitive subdirectories.
 - **Deliverables:** Comprehensive audit report with terminal telemetry and reproducible Bash automation script.
 
-#### 5. [🔍 SQL Security Incident Investigation & Telemetry Filtering Lab](https://github.com/edusouzamarques/sql-security-incident-investigation-lab)
+#### 6. [🔍 SQL Security Incident Investigation & Telemetry Filtering Lab](https://github.com/edusouzamarques/sql-security-incident-investigation-lab)
 - **Focus:** Database Security, SOC Incident Triage, and Authentication Log Analysis via SQL.
 - **Scenario:** Investigating after-hours failed login spikes, isolating multi-day breach timelines, detecting foreign IP anomalies, and segmenting employee workstations for vulnerability patching.
 - **Deliverables:** Formal triage report, standalone SQLite database instance, and automated query execution engine.
 
-#### 6. [📡 tcpdump Incident Investigation & Packet Analysis Lab](https://github.com/edusouzamarques/tcpdump-incident-investigation-lab)
+#### 7. [📡 tcpdump Incident Investigation & Packet Analysis Lab](https://github.com/edusouzamarques/tcpdump-incident-investigation-lab)
 - **Focus:** Network Protocol Analysis, Threat Hunting, and Packet Sniffing (`tcpdump`).
 - **Scenario:** Triage of a compromised web server executing unauthorized JavaScript browser redirection to a malicious domain.
 - **Deliverables:** Real packet trace analysis, TCP 3-way handshake dissection, DNS/HTTP correlation, and packet analysis cheat sheet.
@@ -109,6 +115,6 @@ Thirteen years in the military police teaches you that systems fail at the worst
 
 ## 📬 Stack & Contact
 
-- **Cybersecurity Standards:** NIST CSF · NIST SP 800-53 / 800-63B · CIS Controls v8 · GDPR / LGPD · SQL / MariaDB · Wireshark / tcpdump · SIEM
+- **Cybersecurity Standards:** NIST CSF · NIST SP 800-53 (AC-6 / PR.DS-5) · CIS Controls v8 · GDPR / LGPD · SQL / MariaDB · Wireshark / tcpdump · SIEM
 - **AI Stack:** Python 3.9+ · zero-dependency · ~3,400 tests · CI on Linux/macOS/Windows · MIT licensed
 - **Contact:** [LinkedIn — /in/edusouzamarques](https://www.linkedin.com/in/edusouzamarques) · eduardo@zemark.dev
