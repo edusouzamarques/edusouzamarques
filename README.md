@@ -18,15 +18,16 @@ flowchart TD
         L4["<b>Access Control & AAA Audit</b><br/>Payroll Incident Audit (Event 1227)<br/><i>AAA / Non-Repudiation / Dual-Auth</i>"]
     end
 
-    subgraph Defense["2. Network & System Hardening"]
-        L5["<b>Perimeter & Access Hardening</b><br/>Network Hardening & Risk Assessment<br/><i>MFA / Port Filtering / SIEM</i>"]
-        L6["<b>Incident Response & DoS Defense</b><br/>DoS ICMP Flood Incident Report<br/><i>NIST CSF / Rate Limiting / uRPF</i>"]
-        L7["<b>Linux Authorization & Least Privilege</b><br/>Linux File Permissions Audit<br/><i>chmod / ls -la / Access Control</i>"]
+    subgraph Defense["2. Network & System Hardening (Physical & Digital)"]
+        L5["<b>Physical & Removable Media Defense</b><br/>Parking Lot USB Baiting Lab<br/><i>Social Engineering / GPO / Sandboxing</i>"]
+        L6["<b>Perimeter & Access Hardening</b><br/>Network Hardening & Risk Assessment<br/><i>MFA / Port Filtering / SIEM</i>"]
+        L7["<b>Incident Response & DoS Defense</b><br/>DoS ICMP Flood Incident Report<br/><i>NIST CSF / Rate Limiting / uRPF</i>"]
+        L8["<b>Linux Authorization & Least Privilege</b><br/>Linux File Permissions Audit<br/><i>chmod / ls -la / Access Control</i>"]
     end
 
     subgraph Forensics["3. Forensics & SOC Data Analysis"]
-        L8["<b>Network Forensics & Packet Analysis</b><br/>tcpdump Incident Investigation<br/><i>DNS & HTTP Malware Triage</i>"]
-        L9["<b>SQL SOC Triage & Log Filtering</b><br/>SQL Security Incident Investigation<br/><i>AND / OR / NOT / LIKE Telemetry</i>"]
+        L9["<b>Network Forensics & Packet Analysis</b><br/>tcpdump Incident Investigation<br/><i>DNS & HTTP Malware Triage</i>"]
+        L10["<b>SQL SOC Triage & Log Filtering</b><br/>SQL Security Incident Investigation<br/><i>AND / OR / NOT / LIKE Telemetry</i>"]
     end
 
     subgraph Hub["🌐 Live Portfolio Hub"]
@@ -60,27 +61,32 @@ flowchart TD
 - **Scenario:** Forensic triage of unauthorized payroll routing changes (Event ID 1227) executed via a shared `Legal\Administrator` account from a rogue external machine (`Up2-NoGud`).
 - **Deliverables:** Formal Access Controls Worksheet report, target-state Zero Trust architecture, and executable Python simulation enforcing RBAC and Maker-Checker dual authorization.
 
-#### 4. [🔒 Network Hardening & Security Risk Assessment Lab](https://github.com/edusouzamarques/network-hardening-security-risk-assessment)
+#### 5. [💾 USB Baiting Attack Vectors & Removable Media Defense Lab](https://github.com/edusouzamarques/usb-baiting-attack-vector-lab)
+- **Focus:** Physical Security, Removable Media Governance, Attacker Mindset, and Social Engineering.
+- **Scenario:** Investigating a branded USB drive found in a hospital parking lot containing a mix of employee personal photos and sensitive hospital PII/shift rosters.
+- **Deliverables:** Formal Parking Lot USB Exercise worksheet, virtualized sandbox analysis, and Python endpoint simulation testing GPO device controls.
+
+#### 6. [🔒 Network Hardening & Security Risk Assessment Lab](https://github.com/edusouzamarques/network-hardening-security-risk-assessment)
 - **Focus:** Network Defense, Perimeter Port Filtering, Password Policies, and Multi-Factor Authentication.
 - **Scenario:** Remediation of a social media platform breach caused by exposed database ports, vendor-default passwords, and lack of MFA.
 - **Deliverables:** Formal risk assessment report, defense-in-depth architecture, and executable Python simulation engine reproducing the breach and validating hardened controls.
 
-#### 5. [⚡ DoS (ICMP Flood) Incident Report Analysis (NIST CSF)](https://github.com/edusouzamarques/dos-icmp-flood-incident-report-nist-csf)
+#### 7. [⚡ DoS (ICMP Flood) Incident Report Analysis (NIST CSF)](https://github.com/edusouzamarques/dos-icmp-flood-incident-report-nist-csf)
 - **Focus:** Incident Response (IR), Denial of Service (DoS) Containment, and NIST CSF 5-Function Lifecycle.
 - **Scenario:** Triage, containment, and recovery of a 2-hour network blackout caused by an ICMP ping flood exploiting an unconfigured firewall.
 - **Deliverables:** Full NIST CSF incident report (Identify, Protect, Detect, Respond, Recover) and Python simulation demonstrating interface queue overflow vs. rate-limiting and anti-spoofing (uRPF).
 
-#### 6. [🔑 Linux File Permissions & Least Privilege Audit Lab](https://github.com/edusouzamarques/linux-file-permissions-least-privilege-audit)
+#### 8. [🔑 Linux File Permissions & Least Privilege Audit Lab](https://github.com/edusouzamarques/linux-file-permissions-least-privilege-audit)
 - **Focus:** Operating System Hardening, Access Control Lists (ACLs), and Principle of Least Privilege (PoLP).
 - **Scenario:** Security audit of research team files (`/home/researcher2/projects`), revoking unauthorized world-write permissions, locking down archived files, and isolating sensitive subdirectories.
 - **Deliverables:** Comprehensive audit report with terminal telemetry and reproducible Bash automation script.
 
-#### 7. [🔍 SQL Security Incident Investigation & Telemetry Filtering Lab](https://github.com/edusouzamarques/sql-security-incident-investigation-lab)
+#### 9. [🔍 SQL Security Incident Investigation & Telemetry Filtering Lab](https://github.com/edusouzamarques/sql-security-incident-investigation-lab)
 - **Focus:** Database Security, SOC Incident Triage, and Authentication Log Analysis via SQL.
 - **Scenario:** Investigating after-hours failed login spikes, isolating multi-day breach timelines, detecting foreign IP anomalies, and segmenting employee workstations for vulnerability patching.
 - **Deliverables:** Formal triage report, standalone SQLite database instance, and automated query execution engine.
 
-#### 8. [📡 tcpdump Incident Investigation & Packet Analysis Lab](https://github.com/edusouzamarques/tcpdump-incident-investigation-lab)
+#### 10. [📡 tcpdump Incident Investigation & Packet Analysis Lab](https://github.com/edusouzamarques/tcpdump-incident-investigation-lab)
 - **Focus:** Network Protocol Analysis, Threat Hunting, and Packet Sniffing (`tcpdump`).
 - **Scenario:** Triage of a compromised web server executing unauthorized JavaScript browser redirection to a malicious domain.
 - **Deliverables:** Real packet trace analysis, TCP 3-way handshake dissection, DNS/HTTP correlation, and packet analysis cheat sheet.
