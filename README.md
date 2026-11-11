@@ -11,21 +11,22 @@ A dedicated operational showcase of hands-on incident investigations, compliance
 
 ```mermaid
 flowchart TD
-    subgraph GRC["1. Governance, Risk & Access Control (GRC & AAA)"]
+    subgraph GRC["1. Governance, Risk & Vulnerability Management (GRC & VRM)"]
         L1["<b>GRC & Compliance Audit</b><br/>Botium Toys Security Audit<br/><i>NIST CSF / Scope / Controls</i>"]
-        L2["<b>Data Leak Prevention & Least Privilege</b><br/>Data Leak Prevention (NIST AC-6)<br/><i>DLP / Auto-Revocation / RBAC</i>"]
-        L3["<b>Access Control & AAA Audit</b><br/>Payroll Incident Audit (Event 1227)<br/><i>AAA / Non-Repudiation / Dual-Auth</i>"]
+        L2["<b>Vulnerability Assessment & Risk Scoring</b><br/>E-Commerce Database Assessment<br/><i>NIST SP 800-30 / Port 3306 / VPN</i>"]
+        L3["<b>Data Leak Prevention & Least Privilege</b><br/>Data Leak Prevention (NIST AC-6)<br/><i>DLP / Auto-Revocation / RBAC</i>"]
+        L4["<b>Access Control & AAA Audit</b><br/>Payroll Incident Audit (Event 1227)<br/><i>AAA / Non-Repudiation / Dual-Auth</i>"]
     end
 
     subgraph Defense["2. Network & System Hardening"]
-        L4["<b>Perimeter & Access Hardening</b><br/>Network Hardening & Risk Assessment<br/><i>MFA / Port Filtering / SIEM</i>"]
-        L5["<b>Incident Response & DoS Defense</b><br/>DoS ICMP Flood Incident Report<br/><i>NIST CSF / Rate Limiting / uRPF</i>"]
-        L6["<b>Linux Authorization & Least Privilege</b><br/>Linux File Permissions Audit<br/><i>chmod / ls -la / Access Control</i>"]
+        L5["<b>Perimeter & Access Hardening</b><br/>Network Hardening & Risk Assessment<br/><i>MFA / Port Filtering / SIEM</i>"]
+        L6["<b>Incident Response & DoS Defense</b><br/>DoS ICMP Flood Incident Report<br/><i>NIST CSF / Rate Limiting / uRPF</i>"]
+        L7["<b>Linux Authorization & Least Privilege</b><br/>Linux File Permissions Audit<br/><i>chmod / ls -la / Access Control</i>"]
     end
 
     subgraph Forensics["3. Forensics & SOC Data Analysis"]
-        L7["<b>Network Forensics & Packet Analysis</b><br/>tcpdump Incident Investigation<br/><i>DNS & HTTP Malware Triage</i>"]
-        L8["<b>SQL SOC Triage & Log Filtering</b><br/>SQL Security Incident Investigation<br/><i>AND / OR / NOT / LIKE Telemetry</i>"]
+        L8["<b>Network Forensics & Packet Analysis</b><br/>tcpdump Incident Investigation<br/><i>DNS & HTTP Malware Triage</i>"]
+        L9["<b>SQL SOC Triage & Log Filtering</b><br/>SQL Security Incident Investigation<br/><i>AND / OR / NOT / LIKE Telemetry</i>"]
     end
 
     subgraph Hub["🌐 Live Portfolio Hub"]
@@ -44,12 +45,17 @@ flowchart TD
 - **Scenario:** Comprehensive security audit of an international toy company preparing for modern digital expansion.
 - **Deliverables:** Complete stakeholder-ready audit report, NIST CSF alignment matrix, scope boundaries, risk register, and [executive PDF report](https://edusouzamarques.github.io/cybersec/Botium_Toys_Security_Audit_Report.pdf).
 
-#### 2. [📋 Data Leak Prevention & Least Privilege Lab (NIST SP 800-53: AC-6)](https://github.com/edusouzamarques/data-leak-prevention-nist-ac6)
+#### 2. [📊 E-Commerce Database Vulnerability Assessment Lab (NIST SP 800-30 Rev. 1)](https://github.com/edusouzamarques/ecommerce-database-vulnerability-assessment)
+- **Focus:** Vulnerability Assessment, Threat Modeling, and Qualitative Risk Scoring (NIST SP 800-30 Rev. 1).
+- **Scenario:** Assessing an international e-commerce firm whose core remote MySQL database server remained open to the public Internet on IPv4 for over three years.
+- **Deliverables:** Formal Vulnerability Assessment Report (Purpose, Risk Assessment Table, Approach, Remediation), defense-in-depth architecture, and an executable Python risk scoring engine.
+
+#### 3. [📋 Data Leak Prevention & Least Privilege Lab (NIST SP 800-53: AC-6)](https://github.com/edusouzamarques/data-leak-prevention-nist-ac6)
 - **Focus:** Data Loss Prevention (DLP), Access Control Lists, and NIST SP 800-53 Control AC-6.
 - **Scenario:** Triage and remediation of an internal data leak at an EdTech firm where confidential product roadmaps were shared externally due to lack of link expiration and over-provisioned access.
 - **Deliverables:** Formal Data Leak Worksheet, NIST CSF mapping (PR.DS-5), and an executable Python simulation validating expiring TTL links and role-based sharing blocks.
 
-#### 3. [🔑 Access Control & AAA Framework Audit Lab (NIST SP 800-53 / CIS Controls)](https://github.com/edusouzamarques/access-control-aaa-audit-lab)
+#### 4. [🔑 Access Control & AAA Framework Audit Lab (NIST SP 800-53 / CIS Controls)](https://github.com/edusouzamarques/access-control-aaa-audit-lab)
 - **Focus:** Authentication, Authorization, Accounting (AAA), Non-Repudiation, and Dual-Authorization.
 - **Scenario:** Forensic triage of unauthorized payroll routing changes (Event ID 1227) executed via a shared `Legal\Administrator` account from a rogue external machine (`Up2-NoGud`).
 - **Deliverables:** Formal Access Controls Worksheet report, target-state Zero Trust architecture, and executable Python simulation enforcing RBAC and Maker-Checker dual authorization.
