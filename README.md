@@ -1,17 +1,18 @@
 # Eduardo de Souza Marques
-### AI Safety / Agent-Governance & Cybersecurity Professional
+### Cybersecurity & GRC Professional | AI Governance (NIST CSF 2.0 & AI RMF) | Former Law Enforcement Investigator
 
-I build control planes for autonomous agents and defend enterprise digital infrastructure. My work bridges **AI safety guardrails, verifiable audit ledgers, and applied cybersecurity operations (GRC, SOC & Network Hardening)**.
+I defend enterprise digital infrastructure and build control planes for autonomous AI systems. My work bridges **applied cybersecurity operations (GRC, Vulnerability Management, SOC & Incident Response)** with **AI safety guardrails, verifiable audit ledgers, and deterministic execution boundaries**.
 
 ---
 
 ## 🎯 Hands-on Cybersecurity Portfolio (Simulated Scenarios & Audit Labs)
 
-A dedicated operational showcase of hands-on incident investigations, compliance audits, and security simulations derived from the **Google Cybersecurity Professional Certificate** and industry frameworks (NIST CSF / NIST SP 800-53 / NIST SP 800-63B / CIS Controls / GDPR):
+A dedicated operational showcase of hands-on incident investigations, compliance audits, and security simulations derived from the **Enterprise GRC Lab**, **Google Cybersecurity Professional Certificate**, **Qualys Enterprise TruRisk & Vulnerability Management**, and industry frameworks (NIST CSF 2.0 / ISO 27001 / SOC 2 / NIST SP 800-53 / CIS Controls / LGPD / GDPR):
 
 ```mermaid
 flowchart TD
     subgraph GRC["1. Governance, Risk & Vulnerability Management (GRC & VRM)"]
+        L0["<b>Enterprise GRC & Assurance Lab</b><br/>grc-lab<br/><i>NIST CSF 2.0 / ISO 27001 / SOC 2</i>"]
         L1["<b>GRC & Compliance Audit</b><br/>Botium Toys Security Audit<br/><i>NIST CSF / Scope / Controls</i>"]
         L2["<b>Vulnerability Assessment & Risk Scoring</b><br/>E-Commerce Database Assessment<br/><i>NIST SP 800-30 / Port 3306 / VPN</i>"]
         L3["<b>Data Leak Prevention & Least Privilege</b><br/>Data Leak Prevention (NIST AC-6)<br/><i>DLP / Auto-Revocation / RBAC</i>"]
@@ -40,6 +41,11 @@ flowchart TD
 ```
 
 ### 📋 Practical Lab Repositories
+
+#### 0. [🛡️ Enterprise GRC & Security Assurance Lab (NIST CSF 2.0 ⇄ ISO 27001:2022 ⇄ SOC 2)](https://github.com/edusouzamarques/grc-lab)
+- **Focus:** Multi-Framework GRC, Enterprise Risk Register (5x5 Heatmap), Audit Evidence Collection, and Third-Party Risk Management (TPRM).
+- **Scenario:** Unified compliance and security posture for a cloud-native enterprise managing sensitive financial and consumer data under LGPD, GDPR, and SOC 2.
+- **Deliverables:** Complete 10-risk quantitative scoring engine (`scripts/risk_scoring_engine.py`), JSON risk data (`data/risks.json`), vendor due diligence audit, executive board memo, and [interactive web dashboard](https://edusouzamarques.github.io/cybersec/grc-lab.html).
 
 #### 1. [🛡️ Botium Toys Security Audit (GRC & Compliance)](https://github.com/edusouzamarques/botium-toys-security-audit)
 - **Focus:** Governance, Risk, and Compliance (GRC), Internal Audit, and Risk Assessment.
@@ -133,6 +139,6 @@ Thirteen years in the military police teaches you that systems fail at the worst
 
 ## 📬 Stack & Contact
 
-- **Cybersecurity Standards:** NIST CSF · NIST SP 800-53 (AC-6 / PR.DS-5) · CIS Controls v8 · GDPR / LGPD · SQL / MariaDB · Wireshark / tcpdump · SIEM
-- **AI Stack:** Python 3.9+ · zero-dependency · ~3,400 tests · CI on Linux/macOS/Windows · MIT licensed
-- **Contact:** [LinkedIn — /in/edusouzamarques](https://www.linkedin.com/in/edusouzamarques) · eduardo@zemark.dev
+- **Cybersecurity Standards:** NIST CSF 2.0 · ISO/IEC 27001:2022 · SOC 2 Type II · NIST SP 800-53 · CIS Controls v8 · GDPR / LGPD · Qualys TruRisk / VMDR · Wireshark / tcpdump · SIEM / EDR
+- **AI Stack & Governance:** Python 3.9+ · zero-dependency guardrails · ~3,400 tests · NIST AI RMF 1.0 · CI on Linux/macOS/Windows · MIT licensed
+- **Contact:** [LinkedIn — /in/edusouzamarques](https://www.linkedin.com/in/edusouzamarques) · [edusouzam85@gmail.com](mailto:edusouzam85@gmail.com)
